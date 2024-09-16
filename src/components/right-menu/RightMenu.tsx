@@ -1,4 +1,5 @@
 import UserInfoCard from './UserInfoCard'
+import UserMediaCard from './UserMediaCard'
 import FriendRequests from './FriendRequests'
 import Birthdays from './Birthdays'
 import Ad from '../Ad'
@@ -9,6 +10,7 @@ export default function RightMenu({ userId }: { userId?: string }) {
 			{userId ? (
 				<>
 					<UserInfoCard userId={userId} />
+					<UserMediaCard userId={userId} />
 				</>
 			) : null}
 			<FriendRequests />
