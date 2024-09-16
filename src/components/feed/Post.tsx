@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Comments from './Comments'
 
 export default function Post() {
 	return (
@@ -82,6 +83,7 @@ export default function Post() {
 					</div>
 				</div>
 			</div>
+			<Comments />
 		</div>
 	)
 }
