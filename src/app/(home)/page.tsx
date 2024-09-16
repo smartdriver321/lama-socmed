@@ -1,6 +1,7 @@
 import LeftMenu from '@/components/left-menu/LeftMenu'
 import Stories from '@/components/Stories'
 import AddPost from '@/components/AddPost'
+import Feed from '@/components/feed/Feed'
 
 export default function HomePage() {
 	return (
@@ -10,7 +11,9 @@ export default function HomePage() {
 			</div>
 			<div className='w-full lg:w-[70%] xl:w-[50%]'>
 				<div className='flex flex-col gap-6'>
-					<Stories /> <AddPost /> Feed
+					<Stories />
+					<AddPost />
+					<Feed />
 				</div>
 			</div>
 			<div className='hidden lg:block w-[30%]'>RightMenu</div>
