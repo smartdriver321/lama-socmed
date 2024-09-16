@@ -2,6 +2,7 @@ import LeftMenu from '@/components/left-menu/LeftMenu'
 import Stories from '@/components/Stories'
 import AddPost from '@/components/AddPost'
 import Feed from '@/components/feed/Feed'
+import RightMenu from '@/components/right-menu/RightMenu'
 
 export default function HomePage() {
 	return (
@@ -16,7 +17,9 @@ export default function HomePage() {
 					<Feed />
 				</div>
 			</div>
-			<div className='hidden lg:block w-[30%]'>RightMenu</div>
+			<div className='hidden lg:block w-[30%]'>
+				<RightMenu />
+			</div>
 		</div>
 	)
 }
