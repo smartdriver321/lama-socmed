@@ -163,8 +163,8 @@ export const acceptFollowRequest = async (userId: string) => {
 
 			await prisma.follower.create({
 				data: {
-					followerId: userId,
-					followingId: currentUserId,
+					followerId: currentUserId,
+					followingId: userId,
 				},
 			})
 		}
