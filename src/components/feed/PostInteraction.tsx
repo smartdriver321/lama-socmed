@@ -4,6 +4,8 @@ import { useAuth } from '@clerk/nextjs'
 import Image from 'next/image'
 import { useOptimistic, useState } from 'react'
 
+import { switchLike } from '@/lib/actions'
+
 export default function PostInteraction({
 	postId,
 	likes,
@@ -13,7 +15,7 @@ export default function PostInteraction({
 	likes: string[]
 	commentNumber: number
 }) {
-	const { userId } = useAuth()
+	const { isLoaded, userId } = useAuth()
 	const [likeState, setLikeState] = useState({
 		likeCount: likes.length,
 		isLiked: userId ? likes.includes(userId) : false,
@@ -32,12 +34,14 @@ export default function PostInteraction({
 	const likeAction = async () => {
 		switchOptimisticLike('')
 		try {
+			switchLike(postId)
 			setLikeState((state) => ({
 				likeCount: state.isLiked ? state.likeCount - 1 : state.likeCount + 1,
 				isLiked: !state.isLiked,
 			}))
 		} catch (err) {}
 	}
+
 	return (
 		<div className='flex items-center justify-between text-sm my-4'>
 			<div className='flex gap-8'>
