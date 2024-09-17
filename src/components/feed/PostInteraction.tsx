@@ -15,6 +15,7 @@ export default function PostInteraction({
 	likes: string[]
 	commentNumber: number
 }) {
+	// eslint-disable-next-line no-unused-vars
 	const { isLoaded, userId } = useAuth()
 	const [likeState, setLikeState] = useState({
 		likeCount: likes.length,
@@ -23,6 +24,7 @@ export default function PostInteraction({
 
 	const [optimisticLike, switchOptimisticLike] = useOptimistic(
 		likeState,
+		// eslint-disable-next-line no-unused-vars
 		(state, value) => {
 			return {
 				likeCount: state.isLiked ? state.likeCount - 1 : state.likeCount + 1,

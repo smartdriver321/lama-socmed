@@ -10,6 +10,7 @@ import AddPostButton from './AddPostButton'
 
 export default function AddPost() {
 	const { user, isLoaded } = useUser()
+	// eslint-disable-next-line no-unused-vars
 	const [desc, setDesc] = useState('')
 	const [img, setImg] = useState<any>()
 
