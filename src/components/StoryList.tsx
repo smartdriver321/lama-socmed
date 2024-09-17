@@ -22,6 +22,7 @@ export default function StoryList({
 	const [storyList, setStoryList] = useState(stories)
 	const [img, setImg] = useState<any>()
 
+	// eslint-disable-next-line no-unused-vars
 	const { user, isLoaded } = useUser()
 
 	const add = async () => {
